@@ -1,56 +1,57 @@
 .App {
-    font-family: sans-serif;
-    text-align: center;
+  font-family: sans-serif;
+  text-align: center;
 }
 
-.game {
-    font-family: sans-serif;
-    text-align: center;
+.game{
+  font-family: sans-serif;
+  text-align: center;
 }
 
 body {
-    font: 14px "Century Gothic", Futura, sans-serif;
-    margin: 20px;
+  font: 14px "Century Gothic", Futura, sans-serif;
+  margin: 20px;
 }
 
 ol, ul {
-    padding-left: 1.875em;
+  padding-left: 30px;
 }
 
 .board-row:after {
-    clear: both;
-    content: "";
-    display: table;
+  clear: both;
+  content: "";
+  display: table;
 }
 
 .status {
-    margin-bottom: 0.625em;
+  margin-bottom: 10px;
 }
 
 .square {
-    background: #fff;
-    border: 1px solid #999;
-    float: inside;
-    font-size: 24px;
-    font-weight: bold;
-    line-height: 34px;
-    height: 35px;
-    margin-right: -1px;
-    margin-top: -1px;
-    padding: 0;
-    text-align: center;
-    width: 35px;
+  background: #fff;
+  border: 1px solid #999;
+  float: inside;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 35px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 35px;
 }
 
 .square:focus {
-    outline: none;
+  outline: none;
 }
 
 .kbd-navigation .square:focus {
-    background: #ddd;
+  background: #ddd;
 }
 
 
 .game-info {
-    margin-left: 10px;
+  margin-left: 10px;
 }
+
