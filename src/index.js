@@ -21,7 +21,7 @@ var graph = {
 
 var options = {
     layout: {
-        hierarchical: true
+        hierarchical: false
     },
     edges: {
         color: "#000000"
@@ -33,6 +33,9 @@ var events = {
         var { nodes, edges } = event;
     }
 }
+
+
+
 
 
 
