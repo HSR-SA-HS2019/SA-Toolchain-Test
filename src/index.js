@@ -1,6 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Graph from "react-graph-vis"
+//
+// class Graph extends React.Component{
+//
+//     constructor(props){
+//         super(props);
+//         this.state
+//     }
+//
+// }
 
 
 var graph = {
@@ -29,18 +38,14 @@ var options = {
 };
 
 var events = {
-    select: function(event) {
-        var { nodes, edges } = event;
+    select: function (event) {
+        var {nodes, edges} = event;
     }
 }
 
 
-
-
-
-
-
 const rootElement = document.getElementById("root");
-ReactDOM.render(<Graph graph={graph} options={options} events={events} style = {{height: "640px" }}/>, rootElement);
+ReactDOM.render(
+    <Graph graph={graph} options={options} events={events} style={{height: "640px"}}/>, rootElement);
 // ReactDOM.render(<Game />, rootElement);m
 //ReactDOM.render(<App />, rootElement);
