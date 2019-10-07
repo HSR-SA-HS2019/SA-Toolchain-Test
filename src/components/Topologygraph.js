@@ -32,8 +32,6 @@ class Topologygraph extends React.Component {
     }
 
 
-
-
     graph = {
         nodes: [
             {id: 1, label: 'Node 1'},
