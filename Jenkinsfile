@@ -11,6 +11,7 @@ node {
       sh 'git --version'
       echo "Branch: ${env.BRANCH_NAME}"
       sh 'docker -v'
+      sh 'docker build -t react-test -f Dockerfile.test --no-cache .'
       sh 'which docker'
       sh 'printenv'
     }
