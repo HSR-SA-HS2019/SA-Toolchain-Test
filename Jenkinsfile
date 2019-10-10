@@ -1,4 +1,7 @@
 node {
+  agent{
+    dockerfile true
+    }
   try {
     stage('Checkout') {
       checkout scm
@@ -10,12 +13,13 @@ node {
     stage('Environment') {
       sh 'git --version'
       echo "Branch: ${env.BRANCH_NAME}"
-      sh 'docker run -v /var/run/docker.sock:/var/run/docker.sock -ti jenkins'
+      sh 'docker -v'
       sh 'which docker'
       sh 'printenv'
     }
     stage('Build Docker test'){
-     sh 'docker build -t react-test -f Dockerfile.test --no-cache .'
+        def customImage = docker.build("my-image:${env.BUILD_ID}")
+        sh 'docker build -t react-test -f Dockerfile.test --no-cache .'
     }
     stage('Docker test'){
       sh 'docker run --rm react-test'
