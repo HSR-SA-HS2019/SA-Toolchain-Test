@@ -1,7 +1,8 @@
-node {
   agent{
     dockerfile true
     }
+
+node {
   try {
     stage('Checkout') {
       checkout scm
