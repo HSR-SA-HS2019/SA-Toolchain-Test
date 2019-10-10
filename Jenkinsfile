@@ -10,7 +10,7 @@ node {
     stage('Environment') {
       sh 'git --version'
       echo "Branch: ${env.BRANCH_NAME}"
-      sh 'docker -v'
+      sh 'docker run -v /var/run/docker.sock:/var/run/docker.sock -ti jenkins'
       sh 'which docker'
       sh 'printenv'
     }
