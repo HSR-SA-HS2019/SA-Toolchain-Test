@@ -1,6 +1,3 @@
-  agent{
-    dockerfile true
-    }
 
 node {
   try {
