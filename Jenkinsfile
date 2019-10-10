@@ -16,8 +16,7 @@ node {
       sh 'printenv'
     }
     stage('Build Docker test'){
-        def customImage = docker.build("my-image:${env.BUILD_ID}")
-        sh 'docker build -t react-test -f Dockerfile.test --no-cache .'
+        sh 'dockerHome build -t react-test -f Dockerfile.test --no-cache .'
     }
     stage('Docker test'){
       sh 'docker run --rm react-test'
