@@ -15,9 +15,7 @@ node {
       sh 'which docker'
       sh 'printenv'
     }
-    stage('Build Docker test'){
-        sh 'dockerHome build -t react-test -f Dockerfile.test --no-cache .'
-    }
+
     stage('Docker test'){
       sh 'docker run --rm react-test'
     }
