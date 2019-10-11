@@ -16,6 +16,12 @@ node {
       sh 'printenv'
     }
 
+    stage('Docker test'){
+      sh 'docker run --rm react-test'
+    }
+    stage('Clean Docker test'){
+      sh 'docker rmi react-test'
+    }
     stage('Deploy'){
       if(env.BRANCH_NAME == 'master'){
         sh 'docker build -t react-app --no-cache .'
