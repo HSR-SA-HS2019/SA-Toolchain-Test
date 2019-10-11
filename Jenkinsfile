@@ -15,7 +15,7 @@ node {
      sh 'docker build -t react-test -f Dockerfile.test --no-cache .'
     }
     stage('Docker test'){
-      sh 'docker run --rm react-test'
+      //sh 'docker run --rm react-test'
     }
     stage('Clean Docker test'){
       sh 'docker rmi react-test'
