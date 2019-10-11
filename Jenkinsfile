@@ -14,7 +14,7 @@ node {
       sh 'docker -v'
       sh 'which docker'
       sh 'docker run --help'
-      sh 'dockerd'
+      sh 'sudo dockerd'
       sh 'printenv'
     }
 
