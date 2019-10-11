@@ -13,6 +13,7 @@ node {
       echo "Branch: ${env.BRANCH_NAME}"
       sh 'docker -v'
       sh 'which docker'
+      sh 'docker run --help'
       sh 'printenv'
     }
 
