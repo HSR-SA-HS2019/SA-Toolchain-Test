@@ -17,9 +17,7 @@ node {
     }
 
     stage('Docker test'){
-      docker.run('--rm react-test').inside("--volume=/var/run/docker.sock:/var/run/docker.sock") {
-         // The build here
-      }//sh 'docker run --rm react-test'
+      sh 'docker run --rm react-test'
     }
     stage('Clean Docker test'){
       sh 'docker rmi react-test'
