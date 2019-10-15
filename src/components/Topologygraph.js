@@ -14,21 +14,15 @@ class Topologygraph extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    style = {
+        height: "800px",
+        width: `100%`
+    };
+
     handleChange(event) {
         this.setState({value: event.target.value});
         console.log(event.target.value);
-        var nodesCopy = this.graph.nodes.slice(); // this will create a copy with the same items
-        nodesCopy.push({id: 8, label: this.state.value});
-        this.graph.nodes = nodesCopy;
-    }
 
-    handleSubmit(event) {
-        for (const f of this.graph.nodes) {
-
-            console.log(f.id, f.label);
-        }
-
-        event.preventDefaul();
     }
 
 
@@ -74,10 +68,18 @@ class Topologygraph extends React.Component {
         }
     };
 
-    style = {
-        height: "800px",
-        width: `100%`
+    handleSubmit(event) {
+        for (const f of this.graph.nodes) {
+
+            console.log(f.id, f.label);
+
+        }
+        var nodesCopy = this.graph.nodes.slice(); // this will create a copy with the same items
+        nodesCopy.push({id: 8, label: this.state.value});
+        this.graph.nodes.update({id: 8, label: this.state.value});
+        event.preventDefaul();
     }
+
 
     render() {
         return (
